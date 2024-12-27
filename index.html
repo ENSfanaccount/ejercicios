@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">12/20/2024</h1>
+    <button id="button">
+        change color
+    </button>
+    <input type="text" id="input" placeholder="Add something please">
+    <p> Lo que escribes: <span id="output"></span></p>
+    <button id="nmr">click here</button>
+    <p>clicks: <span id="numerator">0</span></p>
+    <button id="toggleBtn">Show/Hide</button>
+    <p id="texto" style="display: nome;">This is the hidden text</p>
+    <script>
+        const title = document.getElementById('title');
+        title.textContent="whatsopaenespanol";
+        const button = document.getElementById('button');
+        button.addEventListener('click', () =>{
+            document.body.style.backgroundColor = 'lightblue';
+
+        }
+        )
+        const input = document.getElementById('input');
+        const output = document.getElementById('output');
+        input.addEventListener('input', () =>{
+            output.textContent = input.value;
+        })
+        const nmr = document.getElementById('nmr');
+        const numerator = document.getElementById('numerator');
+        let i = 0;
+        nmr.addEventListener('click', () =>{
+            i++;
+            numerator.textContent = i;
+        })
+        const toggleBtn = document.getElementById('toggleBtn');
+        const texto = document.getElementById('texto');
+        let visible = false;
+        toggleBtn.addEventListener('click', () =>{
+            visible = !visible;
+            texto.style.display = visible ? 'block' : 'none';
+        })
+    </script>
+
+</body>
+</html>
